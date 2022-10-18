@@ -3,7 +3,7 @@
 //  Project3
 //
 //  Created by Kishan Patel on 10/18/22.
-//
+
 
 import SwiftUI
 
@@ -63,7 +63,7 @@ struct ContentView: View {
     }
 
     private func fetchCars(query: String) async {
-        let validQuery = query.replacingOccurrences(of: " ", with: "+")
+        let validQuery = query.replacingOccurrences(of: " ", with: "-")
         guard let url = URL(string: "https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMake/\(validQuery)?format=json") else {
             print("Invalid URL")
             return
